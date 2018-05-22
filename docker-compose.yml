@@ -1,0 +1,13 @@
+version: "2"
+services:
+  db:
+    image: pandusiddhu/mongo2:latest
+    environment:
+      - AUTH=yes
+      - MONGODB_ADMIN_USER=admin
+      - MONGODB_ADMIN_PASS=admin123
+      - MONGODB_APPLICATION_DATABASE=sample
+      - MONGODB_APPLICATION_USER=aashrey
+      - MONGODB_APPLICATION_PASS=admin123
+    ports:
+      - "27019:27017"
