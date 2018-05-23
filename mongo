@@ -1,0 +1,17 @@
+1. clone the repository 
+git clone https://github.com/shreesri/docker-mongo.git
+
+2. Build the image
+cd docker-mongo
+docker build -it pandusiddhu/mongo2 .
+
+3. run the following two commands in host machine to remove warnings
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+
+4. then do the 
+cd docker-mongo
+docker-compose up -d
+
+5. login mongodb with admin user and admin database(password is admin123)
+mongo -u admin -p --authenticationDatabase admin
